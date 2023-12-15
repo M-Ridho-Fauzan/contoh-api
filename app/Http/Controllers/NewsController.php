@@ -11,13 +11,11 @@ class NewsController extends Controller
 
     public function __construct()
     {
-        // Set your News API key here
         $this->apiKey = '52c74fae8b744931a48703f7f73ed6e9';
     }
 
     public function index()
     {
-        // Fetch all articles about Bitcoin from the News API
         $response = Http::get("https://newsapi.org/v2/everything?q=bitcoin&apiKey={$this->apiKey}");
         $articles = $response->json()['articles'];
 
@@ -26,7 +24,6 @@ class NewsController extends Controller
 
     public function show($id)
     {
-        // Fetch a specific article by its index in the array
         $response = Http::get("https://newsapi.org/v2/everything?q=bitcoin&apiKey={$this->apiKey}");
         $article = $response->json()['articles'][$id];
 

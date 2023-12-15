@@ -17,6 +17,14 @@
                 <h2>{{ $article['title'] }}</h2>
             </a>
             <p>{{ $article['description'] }}</p>
+            <p>Author: {{ $article['author'] }}</p>
+            <p>Published At: {{ $article['publishedAt'] }}</p>
+            <p>Source: {{ $article['source']['name'] }}</p>
+            @if (isset($article['urlToImage']))
+                <img src="{{ $article['urlToImage'] }}" width="300" alt="{{ $article['title'] }}"
+                    style="max-width: 100%;">
+            @endif
+            <!-- Add more details as needed -->
         </div>
     @endforeach
 </body>
