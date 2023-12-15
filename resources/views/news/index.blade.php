@@ -24,7 +24,6 @@
                 <img src="{{ $article['urlToImage'] }}" width="300" alt="{{ $article['title'] }}"
                     style="max-width: 100%;">
             @endif
-            <!-- Add more details as needed -->
         </div>
     @endforeach
 </body>

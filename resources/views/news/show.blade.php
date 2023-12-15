@@ -18,7 +18,6 @@
         <img src="{{ $article['urlToImage'] }}" alt="{{ $article['title'] }}" style="max-width: 100%;">
     @endif
     <a href="{{ $article['url'] }}" target="_blank">Read more</a>
-    <!-- Add more details as needed -->
 </body>
 
 </html>
